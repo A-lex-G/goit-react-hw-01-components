@@ -1,0 +1,84 @@
+body {
+    font-family: "Roboto", sans-serif;
+    background-color: whitesmoke;
+    font-size: 14px;
+}
+
+.profile {
+    width: 200px;
+    margin: 30px auto;
+
+    border: 1px solid white;
+    border-radius: 4px;
+    background-color: white;
+    box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
+        0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
+    overflow: hidden;
+}
+
+.description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.description>p {
+    margin: 0;
+}
+
+.avatar {
+    width: 100px;
+    border-radius: 50px;
+    overflow: hidden;
+    background-color: whitesmoke;
+}
+
+.name {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.tag,
+.location {
+    font-weight: 500;
+    color: grey;
+}
+
+.stats {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    list-style: none;
+    color: grey;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    border-top: 1px solid rgb(238, 233, 233);
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+.stats>li {
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+    padding: 10px 0;
+    width: 70px;
+    background-color: whitesmoke;
+}
+
+.stats>li:not(:last-child) {
+    border-right: 1px solid rgb(238, 233, 233);
+}
+
+.label {
+    font-size: 12px;
+}
+
+.quantity {
+    font-weight: 700;
+    color: black;
+}
