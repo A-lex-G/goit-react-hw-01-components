@@ -1,21 +1,17 @@
 import PropTypes from 'prop-types';
 import css from "./FriendListItem.module.css";
-import styled from 'styled-components';
-
-const Status = styled.span`
-    background-color: ${({isOnline})=> isOnline ? 'yellowgreen' : 'crimson'} 
-`
+import { Status } from './FriendListItemStyles';
 
 export const FriendListItem = ({avatar, name, isOnline}) => {
     return (<li className={css.item}>
-        <Status className={css.status}
-            // style={{ backgroundColor: isOnline ? 'yellowgreen' : 'crimson' }}
-            isOnline={isOnline} //StyledComponents used...
-        >{isOnline}
-        </Status>
-        <img className={css.avatar} src={avatar} alt="User avatar" width="48" />
-        <p className={css.name}>{name}</p>
-    </li>)
+                <Status className={css.status}
+                // style={{ backgroundColor: isOnline ? 'yellowgreen' : 'crimson' }}
+                isOnline={isOnline} //StyledComponents used...
+                >{isOnline}
+                </Status>
+                <img className={css.avatar} src={avatar} alt="User avatar" width="48" />
+                <p className={css.name}>{name}</p>
+            </li>)
 }
 
 FriendListItem.propTypes = {

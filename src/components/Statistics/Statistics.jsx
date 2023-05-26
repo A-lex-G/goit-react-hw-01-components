@@ -1,18 +1,18 @@
 import PropTypes from 'prop-types'
 import css from "./Statistics.module.css";
-import styled from 'styled-components';
+import { StatsItem } from './StatisticsStyles';
 
-const StatsItem = styled.li`
-background-color: ${function getRandomHexColor() {
-  return `#${Math.floor(Math.random() * 16777215)
-    .toString(16)
-    .padStart(6, 0)}`;
-} }
-`
+// const StatsItem = styled.li`
+// background-color: ${function getRandomHexColor() {
+//   return `#${Math.floor(Math.random() * 16777215)
+//     .toString(16)
+//     .padStart(6, 0)}`;
+// } }
+// `
 
 export const Statistics = ({title, stats}) => {
-    return( <section className={css.statistics}>
-        <h2 className={css.title}>{title}</h2>
+    return (<section className={css.statistics}>
+        {title && (<h2 className={css.title}>{title}</h2>)}
         <ul className={css.statlist}>
             {stats.map(({
                 id, label, percentage}) => (<StatsItem key={id} className={css.item}> 
